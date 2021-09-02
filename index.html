@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src = "https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    </head>
+
+    <body>
+        <a-scene background = "color:gray">
+            <a-assets>
+                <a-asset-item id = 'table1' src = "./scene1.glb"></a-asset-item>
+                <a-asset-item id = 'table2' src = "./Fantabulous Migelo-Sango/obj.mtl"></a-asset-item>
+                <a-asset-item id = 'table2-obj' src = "./Fantabulous Migelo-Sango/tinker.obj"></a-asset-item>
+
+            </a-assets>
+            <a-circle color="blue" radius = "20" position="0 0 -25" rotation="-90 0 0"></a-circle>
+
+            <a-entity gltf-model="#table1" position = "0 0 -20" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity obj-model="obj:#table2-obj;mtl:#table2" position = "0 0 -10" scale="0.1 0.1 0.1" rotation = "-90 45 0"></a-entity>
+
+        
+        </a-scene>
+    </body>
+</html>
